@@ -1,11 +1,589 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <!-- bootstrap css  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <!-- fontawesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+  <!-- style css  -->
+  <link rel="stylesheet" href="Asset/css/style.css">
+
 </head>
+
 <body>
+  
+  <header>
+    <!-- Top info bar -->
+    <div class="info-navbar">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <!-- Left side: social media icons -->
+          <div class="col-md-4 d-flex justify-content-start align-items-center">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+
+          <!-- Center text -->
+          <div class="col-md-4 text-center">
+            Free shipping, ships in 24 hours
+          </div>
+
+          <!-- Right side (optional) -->
+          <div class="col-md-4 text-end">
+            <!-- You can add login or cart icons here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- main nav  -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold" href="#">TickToks</a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto">
+            <!-- SALE -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle nav-sale" href="#" id="saleDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Sale
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="saleDropdown">
+                <li><a class="dropdown-item" href="#">Men’s Sale</a></li>
+                <li><a class="dropdown-item" href="#">Women’s Sale</a></li>
+                <li><a class="dropdown-item" href="#">Luxury Sale</a></li>
+              </ul>
+            </li>
+
+            <!-- BRANDS -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="brandsDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Brands
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="brandsDropdown">
+                <li><a class="dropdown-item" href="#">Timex</a></li>
+                <li><a class="dropdown-item" href="#">Fastrack</a></li>
+                <li><a class="dropdown-item" href="#">Titan</a></li>
+                <li><a class="dropdown-item" href="#">Casio</a></li>
+              </ul>
+            </li>
+
+            <!-- Other links -->
+            <li class="nav-item"><a class="nav-link" href="#">About </a></li>
+            <li class="nav-item"><a class="nav-link" href="#"> Contact </a></li>
+            <li class="nav-item"><a class="nav-link" href="#"> Service</a></li>
+
+          </ul>
+
+          <!-- Right side icons -->
+          <div class="d-flex align-items-center">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+              style="border-radius: 20px;">
+            <a href="#" class="me-3"><i class="fa-regular fa-user"></i></a>
+
+            <a href="#" class="position-relative">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- carousel  -->
+  <section>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="Asset/img/ban-1.png" class="d-block w-100" alt="ban1">
+        </div>
+        <div class="carousel-item">
+          <img src="Asset/img/ban-3.png" class="d-block w-100" alt="ban3">
+        </div>
+        <div class="carousel-item">
+          <img src="Asset/img/ban-2.png" class="d-block w-100" alt="ban2">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- let make slider  -->
+  <section class="products py-5">
+    <div class="container">
+      <h2 class="title text-center mb-5 "><span>Our Collection</span></h2>
+
+      <div class="slider">
+        <div class="image-slider  ">
+          <div class="slide "><img src="Asset/img/productwatch1.png" alt=""></div>
+          <div class="slide"><img src="Asset/img/productwatch2.png" alt=""></div>
+          <div class="slide"><img src="Asset/img/productwatch3.png" alt=""></div>
+          <div class="slide"><img src="Asset/img/productwatch4.png" alt=""></div>
+          <div class="slide"><img src="Asset/img/productwatch5.png" alt=""></div>
+          <div class="slide"><img src="Asset/img/productwatch6.png" alt=""></div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- let make about section  -->
+  <section class="about-sec py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12  col-lg-7">
+          <div class="about-img"><img src="Asset/img/abouts-img.png" class="img-fluid" alt=""></div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div class="about-trxt">
+            <span class="title-span">About Us</span>
+            <h2 class="title"><span>Your Destination for Exquistite watches</span></h2>
+            <p>At TickTokz, time meets style. We bring together a wide collection of branded watches from across the
+              globe, offering everything from everyday classics to luxury masterpieces. Whether you’re looking for the
+              bold designs of Fastrack, the timeless elegance of Titan, the precision of Seiko, or the prestige of
+              Rolex, TickTokz is your one‑stop destination. Our platform is designed to make browsing effortless and
+              enjoyable, with curated collections that suit every occasion, personality, and budget. More than just a
+              store, TickTokz is a hub for watch lovers—celebrating craftsmanship, innovation, and the art of keeping
+              time.</p>
+            <p>Welcome to TickTokz, your trusted destination for branded watches.
+              We feature an extensive range of styles, from sporty designs to luxury icons.
+              Our collections highlight world‑renowned brands that blend fashion with precision.
+              Every watch is carefully chosen to suit diverse tastes and occasions.</p>
+
+            <div class="row mt-4">
+              <h5 class="fw-bold tit">Find Store Near You</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet excepturi nemo cum sit asperiores rem
+                beatae saepe?</p>
+            </div>
+
+            <a href="" class="btn btn-dark"> Read More</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- let style products  -->
+  <section class="product-sec py-5">
+    <div class="container">
+      <div class="text-center">
+        <span class="title-span">Our Product</span>
+        <h2 class="title">Exclusive <span>Product</span></h2>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12  col-md-6 col-lg-3 ">
+          <div class="product-box">
+            <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+            <div class="pr-icon">
+              <ul>
+                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+              </ul>
+            </div>
+            <div class="pr-txt">
+              <h3>Omege Speedmaster</h3>
+              <p>$6,00 - $8,00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12  col-md-6 col-lg-3">
+          <div class="product-box">
+            <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+            <div class="pr-icon">
+              <ul>
+                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+              </ul>
+            </div>
+            <div class="pr-txt">
+              <h3>Omege Speedmaster</h3>
+              <p>$6,00 - $8,00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12  col-md-6 col-lg-3">
+          <div class="product-box">
+            <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+            <div class="pr-icon">
+              <ul>
+                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+              </ul>
+            </div>
+            <div class="pr-txt">
+              <h3>Omege Speedmaster</h3>
+              <p>$6,00 - $8,00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="product-box">
+            <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+            <div class="pr-icon">
+              <ul>
+                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+              </ul>
+            </div>
+            <div class="pr-txt">
+              <h3>Omege Speedmaster</h3>
+              <p>$6,00 - $8,00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="product-box">
+            <div class="pr-img text-center"><img src="Asset/img/pro5.png" alt=""></div>
+            <div class="pr-icon">
+              <ul>
+                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+              </ul>
+            </div>
+            <div class="pr-txt">
+              <h3>Omege Speedmaster</h3>
+              <p>$6,00 - $8,00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 ">
+          <div class="product-box">
+            <div class="pr-img text-center"><img src="Asset/img/pro6.png" alt=""></div>
+            <div class="pr-icon">
+              <ul>
+                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+              </ul>
+            </div>
+            <div class="pr-txt">
+              <h3>Omege Speedmaster</h3>
+              <p>$6,00 - $8,00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12  col-md-6 col-lg-3 ">
+          <div class="product-box">
+            <div class="pr-img text-center"><img src="Asset/img/pro7.png" alt=""></div>
+            <div class="pr-icon">
+              <ul>
+                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+              </ul>
+            </div>
+            <div class="pr-txt">
+              <h3>Omege Speedmaster</h3>
+              <p>$6,00 - $8,00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12  col-md-6 col-lg-3">
+          <div class="product-box">
+            <div class="pr-img text-center"><img src="Asset/img/pro8.png" alt=""></div>
+            <div class="pr-icon">
+              <ul>
+                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+              </ul>
+            </div>
+            <div class="pr-txt">
+              <h3>Omege Speedmaster</h3>
+              <p>$6,00 - $8,00</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- lets make another design  -->
+
+  <section class="container py-5">
+    <div class="cartoon-box">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="watch-img"><img src="Asset/img/watch1.png" class="img-fluid" alt=""></div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <h2 class="fw-bold">We Delivery On <span class="text-highlight">Next Day</span></h2>
+          <h3>From 10::00 AM to 08::00 PM</h3>
+          <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+          <a href="" class="btn btn-dark">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- lets make blog  -->
+  <section class="blog-sec py-5">
+    <div class="container">
+
+      <div class="text-center">
+        <span class="title-span">Our Blog</span>
+        <h2 class="title">News & Blogs</h2>
+      </div>
+
+      <div class="row mt-5">
+
+        <div class="col-12 col-lg-4">
+          <div class="blog-box m-2">
+            <div class="blog-img">
+              <img src="Asset/img/blog2.png" class="img-fluid" alt="">
+            </div>
+
+            <div class="blog-text">
+              <h4>Watch Brands : How to pick the best one in 2026</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, fugit! Aut alias consectetur, velit.
+              </p>
+              <a href="" class="read-more ">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <div class="blog-box m-2">
+            <div class="blog-img">
+              <img src="Asset/img/blog1.png" class="img-fluid" alt="">
+            </div>
+
+            <div class="blog-text">
+              <h4>Watch Brands : How to pick the best one in 2026</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, fugit! Aut alias consectetur, velit.
+              </p>
+              <a href="" class="read-more ">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <div class="blog-box m-2">
+            <div class="blog-img">
+              <img src="Asset/img/blog3.png" class="img-fluid" alt="">
+            </div>
+
+            <div class="blog-text">
+              <h4>Watch Brands : How to pick the best one in 2026</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, fugit! Aut alias consectetur, velit.
+              </p>
+              <a href="" class="read-more ">Read More</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- let start footer  -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="footer-box">
+            <h1>TickToks</h1>
+            <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. A soluta 
+              consequuntur eius, ipsa magnam!</p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="footer-link ps-5">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href=""><i class="fa-solid fa-angle-right"></i>Home</a></li>
+              <li><a href=""><i class="fa-solid fa-angle-right"></i>About Us</a></li>
+              <li><a href=""><i class="fa-solid fa-angle-right"></i>Blogs</a></li>
+              <li><a href=""><i class="fa-solid fa-angle-right"></i>Service</a></li>
+              <li><a href=""><i class="fa-solid fa-angle-right"></i>Contact Us</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="footer-link ps-5">
+            <h4>Community</h4>
+            <ul>
+              <li><a href=""><i class="fa-solid fa-angle-right"></i>career</a></li>
+              <li><a href=""><i class="fa-solid fa-angle-right"></i>Leadership</a></li>
+              <li><a href=""><i class="fa-solid fa-angle-right"></i>Privacy Policy</a></li>
+              <li><a href=""><i class="fa-solid fa-angle-right"></i>Terms</a></li>
+              <li><a href=""><i class="fa-solid fa-angle-right"></i>History</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="footer-link">
+            <h4>Contact Info</h4>
+          </div>
+
+          <div class="cont-flex">
+            <i class="fa-solid fa-house-chimney"></i>
+            <div class="">
+              <span>Address</span>
+              <a href="">123 lorem, ipsum dolor</a>
+            </div>
+          </div>
+           
+          <div class="cont-flex">
+            <i class="fa-solid fa-envelope"></i>
+            <div class="">
+              <span>Email</span>
+              <a href="">TickToks@gmail.com</a>
+            </div>
+          </div>
+          
+          <div class="cont-flex">
+            <i class="fa-solid fa-phone"></i>
+            <div class="">
+              <span>Phone</span>
+              <a href="">12345 67123</a>
+            </div>
+          </div>
+          
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyright">
+      <div class="container">
+        <a href="">©copyright 2026.All right Reserved</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+  <!-- bootstrap js  -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- jquery for slider  -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- let add slider  -->
+  <script>
+
+    $('.image-slider').slick({
+      dots: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+     
+
     
+  </script>
+
+
 </body>
+
 </html>
