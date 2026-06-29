@@ -1,0 +1,42 @@
+/* Register page  */
+  .reg-page{
+    background: url(../img/blog3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    }
+    
+    .signup-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px;
+      width: 380px;
+    }
+    .input {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: #fff;
+    }
+    .input::placeholder {
+      color: #ddd;
+    }
+    .btn-register {
+      background-color: #fff;
+      color: #000;
+      border-radius: 20px;
+       font-weight: 900;
+
+    }
+    .bottom-links {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  
