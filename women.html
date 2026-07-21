@@ -1,98 +1,1242 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Women</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-   <link rel="stylesheet" href="./Asset/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Asset/css/style.css">
+    <style>
+        .ban:hover img {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
+
 <body>
     <!-- navbar  -->
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-      <!-- Logo -->
-      <a class="navbar-brand fw-bold" href="#">TickToks</a>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold" href="index.html">TickToks</a>
 
-      <!-- Toggler -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-      <!-- Navbar links -->
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav mx-auto">
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto">
 
-          <!-- Men -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle nav-sale" href="men.html" id="saleDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-             Men
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="saleDropdown">
-              <li><a class="dropdown-item" href="men.html">Philipp Plein</a></li>
-              <li><a class="dropdown-item" href="men.html">Adidas</a></li>
-              <li><a class="dropdown-item" href="men.html">Timex</a></li>
-              <li><a class="dropdown-item" href="men.html">Guess </a></li>
-              <li><a class="dropdown-item" href="men.html">Gc</a></li>
-              <li><a class="dropdown-item" href="men.html">Untld</a></li>
-              <li><a class="dropdown-item" href="men.html">Versace</a></li>
-              <li><a class="dropdown-item" href="men.html">Nautica</a></li>
+                    <!-- Men -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-sale" href="men.html" id="saleDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Men
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="saleDropdown">
+                            <li><a class="dropdown-item" href="men.html">Philipp Plein</a></li>
+                            <li><a class="dropdown-item" href="men.html">Adidas</a></li>
+                            <li><a class="dropdown-item" href="men.html">Timex</a></li>
+                            <li><a class="dropdown-item" href="men.html">Guess </a></li>
+                            <li><a class="dropdown-item" href="men.html">Gc</a></li>
+                            <li><a class="dropdown-item" href="men.html">Untld</a></li>
+                            <li><a class="dropdown-item" href="men.html">Versace</a></li>
+                            <li><a class="dropdown-item" href="men.html">Nautica</a></li>
 
-            </ul>
-          </li>
-          <!-- women  -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle nav-sale" href="#" id="saleDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Women
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="saleDropdown">
-             <li><a class="dropdown-item" href="#">Cartier</a></li>
-                <li><a class="dropdown-item" href="#">Rolex</a></li>
-                <li><a class="dropdown-item" href="#">Chanel</a></li>
-                <li><a class="dropdown-item" href="#">Titan </a></li>
-                <li><a class="dropdown-item" href="#">Fastrack</a></li>
-                <li><a class="dropdown-item" href="#">Fossil</a></li>
-               
-            </ul>
-          </li>
+                        </ul>
+                    </li>
+                    <!-- women  -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-sale" href="#" id="saleDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Women
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="saleDropdown">
+                            <li><a class="dropdown-item" href="women.html">Cartier</a></li>
+                            <li><a class="dropdown-item" href="women.html">Rolex</a></li>
+                            <li><a class="dropdown-item" href="women.html">Chanel</a></li>
+                            <li><a class="dropdown-item" href="women.html">Titan </a></li>
+                            <li><a class="dropdown-item" href="women.html">Fastrack</a></li>
+                            <li><a class="dropdown-item" href="women.html">Fossil</a></li>
 
-          <!-- BRANDS -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="brandsDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Brands
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="brandsDropdown">
-              <li><a class="dropdown-item" href="#">Timex</a></li>
-              <li><a class="dropdown-item" href="#">Fastrack</a></li>
-              <li><a class="dropdown-item" href="#">Titan</a></li>
-              <li><a class="dropdown-item" href="#">Casio</a></li>
-            </ul>
-          </li>
+                        </ul>
+                    </li>
 
-          <!-- Other links -->
-          <li class="nav-item"><a class="nav-link" href="contact.html"> Contact </a></li>
-          <li class="nav-item"><a class="nav-link" href="service.html"> Service</a></li>
+                    <!-- BRANDS -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="brandsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Brands
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="brandsDropdown">
+                            <li><a class="dropdown-item" href="#">Timex</a></li>
+                            <li><a class="dropdown-item" href="#">Fastrack</a></li>
+                            <li><a class="dropdown-item" href="#">Titan</a></li>
+                            <li><a class="dropdown-item" href="#">Casio</a></li>
+                        </ul>
+                    </li>
 
-        </ul>
+                    <!-- Other links -->
+                    <li class="nav-item"><a class="nav-link" href="contact.html"> Contact </a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html"> Service</a></li>
 
-        <!-- Right side icons -->
-        <div class="d-flex align-items-center">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-            style="border-radius: 20px;">
-          <a href="login.html" class="me-3"><i class="fa-regular fa-user"></i></a>
+                </ul>
 
-          <a href="#" class="position-relative">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
-          </a>
+                <!-- Right side icons -->
+                <div class="d-flex align-items-center">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        style="border-radius: 20px;">
+                    <a href="login.html" class="me-3"><i class="fa-regular fa-user"></i></a>
+
+                    <a href="cart.html" class="position-relative">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </nav>
+    </nav>
+
+    <!-- banner  -->
+    <section class="hero-section container-fluid mt-4">
+        <img src="./Asset/img/womban.png" alt="Watch Service Banner" class="img-fluid">
+    </section>
+
+    <!-- product  -->
+    <section class="product-sec py-5">
+        <div class="container">
+
+
+            <div class="row mt-5">
+                <div class="col-12  col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro5.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro6.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro7.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro8.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro5.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro6.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro7.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro8.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro5.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro6.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro7.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro8.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro5.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro6.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro7.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro8.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- banner  -->
+    <section class="ban hero-section container-fluid mt-4">
+        <img src="./Asset/img/womban2.png" alt="Watch Service Banner" class="img-fluid">
+    </section>
+
+    <!-- product  -->
+    <section class="product-sec py-5">
+        <div class="container">
+
+
+            <div class="row mt-5">
+                <div class="col-12  col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro5.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro6.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro7.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro8.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro5.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro6.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro7.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro8.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro5.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro6.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro7.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro8.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro5.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro6.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3 ">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro7.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p>$6,00 - $8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6 col-lg-3">
+                    <div class="product-box">
+                        <div class="pr-img text-center"><img src="Asset/img/pro8.png" alt=""></div>
+                        <div class="pr-icon">
+                            <ul>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-eye"></i></a></li>
+
+                            </ul>
+                        </div>
+                        <div class="pr-txt">
+                            <h3>Omege Speedmaster</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+    <!-- footer  -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="footer-box">
+                        <h1>TickToks</h1>
+                        <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. A soluta
+                            consequuntur eius, ipsa magnam!</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="footer-link ps-5">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href=""><i class="fa-solid fa-angle-right"></i>Home</a></li>
+                            <li><a href=""><i class="fa-solid fa-angle-right"></i>About Us</a></li>
+                            <li><a href=""><i class="fa-solid fa-angle-right"></i>Blogs</a></li>
+                            <li><a href=""><i class="fa-solid fa-angle-right"></i>Service</a></li>
+                            <li><a href=""><i class="fa-solid fa-angle-right"></i>Contact Us</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="footer-link ps-5">
+                        <h4>Community</h4>
+                        <ul>
+                            <li><a href=""><i class="fa-solid fa-angle-right"></i>career</a></li>
+                            <li><a href=""><i class="fa-solid fa-angle-right"></i>Leadership</a></li>
+                            <li><a href=""><i class="fa-solid fa-angle-right"></i>Privacy Policy</a></li>
+                            <li><a href=""><i class="fa-solid fa-angle-right"></i>Terms</a></li>
+                            <li><a href=""><i class="fa-solid fa-angle-right"></i>History</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="footer-link">
+                        <h4>Contact Info</h4>
+                    </div>
+
+                    <div class="cont-flex">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <div class="">
+                            <span>Address</span>
+                            <a href="">123 lorem, ipsum dolor</a>
+                        </div>
+                    </div>
+
+                    <div class="cont-flex">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div class="">
+                            <span>Email</span>
+                            <a href="">TickToks@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="cont-flex">
+                        <i class="fa-solid fa-phone"></i>
+                        <div class="">
+                            <span>Phone</span>
+                            <a href="">12345 67123</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="copyright">
+            <div class="container">
+                <a href="">©copyright 2026.All right Reserved</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
