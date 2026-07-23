@@ -1,71 +1,117 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-let cartItems = document.getElementById("cartItems");
+const cartItems = document.getElementById("cartItems");
+const totalPrice = document.getElementById("totalPrice");
 
-let total = 0;
+function displayCart() {
 
-cart.forEach((item, index) => {
+    cartItems.innerHTML = "";
 
-   total += Number(item.price.replace(/,/g, "")) * item.quantity;
+    let total = 0;
 
-    cartItems.innerHTML += `
+    if (cart.length === 0) {
 
-    <div class="card mb-2">
+        cartItems.innerHTML = `
+            <h3 class="text-center mt-5">Your Cart is Empty</h3>
+        `;
 
-        <div class="row p-3">
+        totalPrice.innerHTML = "₹0";
 
-            <div class="col-md-3">
+        return;
+    }
 
-                <img src="${item.image}" class="img-fluid">
+    cart.forEach((item, index) => {
 
-            </div>
+        let subtotal = Number(item.price) * item.quantity;
 
-            <div class="col-md-6">
+        total += subtotal;
 
-                <h4>${item.name}</h4>
+        cartItems.innerHTML += `
 
-                <h5>₹${item.price}</h5>
+        <div class="card mb-3 p-3 shadow-sm">
 
-                <p>Quantity : ${item.quantity}</p>
+            <div class="row align-items-center">
 
-            </div>
+                <div class="col-md-2 text-center">
+                    <img src="${item.image}" class="img-fluid" style="height:120px;">
+                </div>
 
-            <div class="col-md-3">
+                <div class="col-md-3">
+                    <h5>${item.name}</h5>
+                    <p>₹${Number(item.price).toLocaleString("en-IN")}</p>
+                </div>
 
-                <button class="btn btn-danger"
-                onclick="removeItem(${index})">
+                <div class="col-md-3">
 
-                Remove
+                    <button class="btn btn-outline-dark"
+                        onclick="decreaseQuantity(${index})">-</button>
 
-                </button>
+                    <span class="mx-3 fw-bold">${item.quantity}</span>
+
+                    <button class="btn btn-outline-dark"
+                        onclick="increaseQuantity(${index})">+</button>
+
+                </div>
+
+                <div class="col-md-2">
+                    <h5>₹${subtotal.toLocaleString("en-IN")}</h5>
+                </div>
+
+                <div class="col-md-2">
+
+                    <button class="btn btn-danger"
+                        onclick="removeItem(${index})">
+
+                        Remove
+
+                    </button>
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
+        `;
 
-    `;
+    });
 
-});
+    totalPrice.innerHTML = "₹" + total.toLocaleString("en-IN");
+}
 
-cartItems.innerHTML += `
+function increaseQuantity(index) {
 
-<h3 class="text-end">
+    cart[index].quantity++;
 
-Total : ₹${total}
+    localStorage.setItem("cart", JSON.stringify(cart));
 
-</h3>
+    displayCart();
+}
 
-`;
+function decreaseQuantity(index) {
 
-// remove function 
+    if (cart[index].quantity > 1) {
+
+        cart[index].quantity--;
+
+    } else {
+
+        cart.splice(index, 1);
+
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    displayCart();
+}
+
 function removeItem(index) {
 
     cart.splice(index, 1);
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    location.reload();
-
+    displayCart();
 }
+
+displayCart();
