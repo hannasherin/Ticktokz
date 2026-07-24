@@ -67,7 +67,8 @@ function filterProducts() {
     });
 
 }
-
+ 
+// gender filter 
 const menRadio = document.getElementById("menRadio");
 const womenRadio = document.getElementById("womenRadio");
 
@@ -82,3 +83,7 @@ if (womenRadio) {
         window.location.href = "women.html";
     });
 }
+
+
+
+

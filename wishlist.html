@@ -3,13 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
-    <link rel="stylesheet" href="Asset/css/cart.css">
+    <title>Wishlist</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link rel="stylesheet" href="Asset/css/style.css">
-    <link rel="stylesheet" href="">
+
+    <link rel="stylesheet" href="Asset/css/wishlist.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
 </head>
 
 <body>
@@ -86,24 +90,10 @@
 
                 <!-- Right side icons -->
                 <div class="d-flex align-items-center">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-                        style="border-radius: 20px;">
+                   
                     <a href="login.html" class="me-3"><i class="fa-regular fa-user"></i></a>
 
-
-                    <a href="wishlist.html" class="position-relative me-3">
-
-    <i class="fa-regular fa-heart fs-4"></i>
-
-    <span
-        id="wishlist-count"
-        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-
-        0
-
-    </span>
-
-</a>
+                   
 
                     <a href="cart.html" class="position-relative">
 
@@ -122,47 +112,37 @@
         </div>
     </nav>
 
-    <div class="container py-5">
+<div class="container py-5">
 
-        <h2 class="text-center fw-bold mb-5">
-            Your Shopping Cart
-        </h2>
+    <h2 class="text-center fw-bold mb-5">
+        My Wishlist ❤️
+    </h2>
 
-        <div id="cartItems"></div>
+    <div id="wishlistItems"></div>
 
-        <div class="cart-summary mt-5">
+    <div class="wishlist-summary mt-5">
 
-            <div class="d-flex justify-content-between">
-                <h3>Subtotal</h3>
-                <h3 id="totalPrice">₹0</h3>
-            </div>
+        <div class="d-flex justify-content-between">
 
-            <hr>
+            <h4>Total Items</h4>
 
-            <div class="row mt-4">
-
-                <div class="col-md-6">
-                    <a href="index.html" class="btn btn-dark w-100">
-                        Back To Shop
-                    </a>
-                </div>
-
-                <div class="col-md-6">
-                    <button class="btn btn-primary w-100">
-                        Checkout
-                    </button>
-                </div>
-
-            </div>
+            <h4 id="wishlistTotal">0</h4>
 
         </div>
 
+        <hr>
+
+        <a href="index.html" class="btn btn-dark w-100 mt-3">
+            Continue Shopping
+        </a>
+
     </div>
 
-    <script src="Asset/js/common.js"></script>
-    <script src="Asset/js/showcart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</div>
 
+<script src="Asset/js/showwishlist.js"></script>
+<script src="Asset/js/wishlist.js"></script>
+<script src="Asset/js/common.js"></script>
 
 </body>
 
