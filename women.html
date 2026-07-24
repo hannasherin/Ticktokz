@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./Asset/css/style.css">
+    <link rel="stylesheet" href="Asset/css/filter.css">
     <style>
         .ban:hover img {
             transform: scale(1.1);
@@ -94,9 +95,16 @@
                     <a href="login.html" class="me-3"><i class="fa-regular fa-user"></i></a>
 
                     <a href="cart.html" class="position-relative">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        <span
-                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+
+                        <i class="fa-solid fa-cart-shopping fs-4"></i>
+
+                        <span id="cart-count"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+
+                            0
+
+                        </span>
+
                     </a>
                 </div>
             </div>
@@ -109,479 +117,614 @@
     </section>
 
     <!-- product  -->
+    <div class="container-fluid mt-5">
 
-    <section class="product-sec py-5">
-        <div class="container">
+        <div class="row">
 
+            <!-- Sidebar -->
+            <div class="col-lg-3">
 
-            <div class="row mt-5">
-                <div class="col-12  col-md-6 col-lg-3 ">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Omege Speedmaster X" data-price="6000"
-                                        data-image="Asset/img/productwatch3.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
+                <div class="filter-box">
 
-                            </ul>
+                    <h5 class="mb-4">FILTER BY</h5>
+
+                    <!-- Price -->
+                    <div class="filter-item">
+
+                        <button class="filter-btn" data-bs-toggle="collapse" data-bs-target="#price">
+
+                            Price
+
+                        </button>
+
+                        <div class="collapse show" id="price">
+
+                            <div class="form-check">
+                                <input class="form-check-input price-filter" type="radio" value="10000" name="price">
+                                <label>Below ₹10,000</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input price-filter" type="radio" value="50000" name="price">
+                                <label>₹10,000 - ₹50,000</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input price-filter" type="radio" value="50001" name="price">
+                                <label>Above ₹50,000</label>
+                            </div>
+
                         </div>
-                        <div class="pr-txt">
-                            <h3>Omege Speedmaster X </h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i>6,000</p>
 
-                        </div>
                     </div>
+
+                    <!-- Brand -->
+
+                    <div class="filter-item">
+
+                        <button class="filter-btn" data-bs-toggle="collapse" data-bs-target="#brand">
+
+                            Brand
+
+                        </button>
+
+                        <div class="collapse show" id="brand">
+
+                            <div class="form-check">
+                                <input class="form-check-input brand-filter" value="Rolex" type="checkbox">
+                                <label>Rolex</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input brand-filter" value="Casio" type="checkbox">
+                                <label>Casio</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input brand-filter" value="Fossil" type="checkbox">
+                                <label>Fossil</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input brand-filter" value="Timex" type="checkbox">
+                                <label>Timex</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Gender  -->
+                    <div class="filter-item">
+
+                        <button class="filter-btn" data-bs-toggle="collapse" data-bs-target="#gender">
+
+                            Gender
+
+                        </button>
+
+                        <div class="collapse show" id="gender">
+
+                            <div class="form-check">
+                                <input class="form-check-input gender-filter" type="radio" id="menRadio" value="men"
+                                    name="gender">
+                                <label>Men</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input gender-filter" type="radio" id="womenRadio" value="women"
+                                    name="gender">
+                                <label>Women</label>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <div class="col-12  col-md-6 col-lg-3">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Casio X " data-price="9099"
-                                        data-image="Asset/img/productwatch4.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pr-txt">
-                            <h3>Casio S </h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i>9099</p>
+            </div>
 
-                        </div>
-                    </div>
-                </div>
+            <!-- Products -->
 
-                <div class="col-12  col-md-6 col-lg-3">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Fossil Z " data-price="10499"
-                                        data-image="Asset/img/productwatch4.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pr-txt">
-                            <h3>Fossil Z </h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i>10,499</p>
+            <div class="col-lg-9">
 
+                <div class="row">
+
+
+
+
+                    <div class="col-12 col-md-6 col-lg-3 product" data-brand="Omega" data-price="6000"
+                        data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="Omege Speedmaster X" data-price="6000"
+                                            data-image="Asset/img/productwatch3.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3>Omege Speedmaster X </h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i>6000</p>
+
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Rolex" data-price="75000"
-                                        data-image="Asset/img/productwatch3.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pr-txt">
-                            <h3>Rolex</h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i>75,000</p>
+                    <div class="col-12 col-md-6 col-lg-3 product" data-brand="Casio" data-price="9099"
+                        data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="Casio X " data-price="9099"
+                                            data-image="Asset/img/productwatch4.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3>Casio S </h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i>9099</p>
 
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/pro5.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Chanel X" data-price="6999"
-                                        data-image="Asset/img/pro5.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pr-txt">
-                            <h3>Chanel X </h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i>6999</p>
-
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 ">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/pro6.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Timex XX " data-price="80000"
-                                        data-image="Asset/img/pro6.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
+                    <div class="col-12 col-md-6 col-lg-3 product" data-brand="Fossil" data-price="10499"
+                        data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="Fossil Z " data-price="10499"
+                                            data-image="Asset/img/productwatch4.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3>Fossil Z </h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i>10499</p>
 
-                            </ul>
-                        </div>
-                        <div class="pr-txt">
-                            <h3>Timex XX </h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i> 80000</p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12  col-md-6 col-lg-3 ">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/pro7.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Speedmaster O " data-price="60099"
-                                        data-image="Asset/img/pro7.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pr-txt">
-                            <h3> Speedmaster O </h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i>60099</p>
-
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12  col-md-6 col-lg-3">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/pro8.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Gc z " data-price="40000"
-                                        data-image="Asset/img/pro8.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
+                    <div class="col-12 col-md-6 col-lg-3 product" data-brand="Rolex" data-price="75000"
+                        data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="Rolex" data-price="75000"
+                                            data-image="Asset/img/productwatch3.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3>Rolex</h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i>75000</p>
 
-                            </ul>
-                        </div>
-                        <div class="pr-txt">
-                            <h3>Gc z </h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i>40000</p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12  col-md-6 col-lg-3 ">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Tissot" data-price="18000"
-                                        data-image="Asset/img/productwatch3.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pr-txt">
-                            <h3>Tissot</h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i>18000</p>
-
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12  col-md-6 col-lg-3">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Citizen Z " data-price="19099"
-                                        data-image="Asset/img/productwatch4.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pr-txt">
-                            <h3>Citizen Z </h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i>19099</p>
+                    <div class="col-12 col-md-6 col-lg-3 product" data-brand="Chanel" data-price="69999"
+                        data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/pro5.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="Chanel X" data-price="6999"
+                                            data-image="Asset/img/pro5.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3>Chanel X </h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i>6999</p>
 
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12  col-md-6 col-lg-3">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Rado R" data-price="45000"
-                                        data-image="Asset/img/productwatch4.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <div class="pr-txt">
-                            <h3>Rado R </h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i>45000</p>
-
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Seiko S " data-price="150000"
-                                        data-image="Asset/img/productwatch3.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
+                    <div class="col-12 col-md-6 col-lg-3 product" data-brand="Timex" data-price="80000"
+                        data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/pro6.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="Timex XX " data-price="80000"
+                                            data-image="Asset/img/pro6.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
 
-                            </ul>
-                        </div>
-                        <div class="pr-txt">
-                            <h3>Seiko S </h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i>150000</p>
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3>Timex XX </h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i> 80000</p>
 
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="col-12 col-md-6 col-lg-3 product" data-brand="Speedmaster" data-price="60099"
+                        data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/pro7.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="Speedmaster O " data-price="60099"
+                                            data-image="Asset/img/pro7.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3> Speedmaster O </h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i>60099</p>
 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 product" data-brand="Gc" data-price="40000" data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/pro8.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="Gc z " data-price="40000"
+                                            data-image="Asset/img/pro8.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3>Gc z </h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i>40000</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 product" data-brand="Tissot" data-price="18000"
+                        data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="Tissot" data-price="18000"
+                                            data-image="Asset/img/productwatch3.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3>Tissot </h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i>18000</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 product" data-brand="Citizen" data-price="19099"
+                        data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="Citizen" data-price="19099"
+                                            data-image="Asset/img/productwatch4.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3>Citizen Z </h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i>19099</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 product" data-brand="Rado" data-price="45000"
+                        data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="Rado" data-price="45000"
+                                            data-image="Asset/img/productwatch4.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3>Rado R</h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i>45000</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 product" data-brand="Seiko" data-price="150000"
+                        data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="seiko" data-price="150000"
+                                            data-image="Asset/img/productwatch3.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3>Seiko S</h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i>150000</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
 
             </div>
 
         </div>
-    </section>
-    <!-- banner  -->
-    <section class="ban hero-section container-fluid mt-4">
+
+    </div>
+
+  <!-- banner  -->
+    <section class="hero-section container-fluid mt-4">
         <img src="./Asset/img/womban2.png" alt="Watch Service Banner" class="img-fluid">
     </section>
 
     <!-- product  -->
-    <section class="product-sec py-5">
+ <section class="product-sec py-5">
         <div class="container">
 
+          <div class="row mt-5">
+             
+                              <div class="col-12 col-md-6 col-lg-3 product" data-brand="Omega" data-price="6000"
+                        data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="Omege" data-price="6000"
+                                            data-image="Asset/img/productwatch3.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
 
-            <div class="row mt-5">
-                <div class="col-12  col-md-6 col-lg-3 ">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Omege Speedmaster X" data-price="6000"
-                                        data-image="Asset/img/productwatch3.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3>Omege Speedmaster X </h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i>6000</p>
 
-                            </ul>
-                        </div>
-                        <div class="pr-txt">
-                            <h3>Omege Speedmaster X </h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i>6000</p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12  col-md-6 col-lg-3">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Casio X " data-price="9099"
-                                        data-image="Asset/img/productwatch4.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pr-txt">
-                            <h3>Casio S </h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i>9099</p>
-
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12  col-md-6 col-lg-3">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Fossil Z " data-price="10499"
-                                        data-image="Asset/img/productwatch4.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pr-txt">
-                            <h3>Fossil Z </h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i>10499</p>
+                    <div class="col-12 col-md-6 col-lg-3 product" data-brand="Casio" data-price="9099"
+                        data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="Casio" data-price="9099"
+                                            data-image="Asset/img/productwatch4.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3>Casio </h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i>9099</p>
 
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Rolex" data-price="75000"
-                                        data-image="Asset/img/productwatch3.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pr-txt">
-                            <h3>Rolex</h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i>75000</p>
-
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/pro5.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Chanel X" data-price="6999"
-                                        data-image="Asset/img/pro5.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pr-txt">
-                            <h3>Chanel X </h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i>6999</p>
+                    <div class="col-12 col-md-6 col-lg-3 product" data-brand="Fossil" data-price="10499"
+                        data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/productwatch4.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="Fossil" data-price="10499"
+                                            data-image="Asset/img/productwatch4.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3>Fossil</h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i>10499</p>
 
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 ">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/pro6.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Timex XX " data-price="80000"
-                                        data-image="Asset/img/pro6.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <div class="pr-txt">
-                            <h3>Timex XX </h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i> 80000</p>
-
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12  col-md-6 col-lg-3 ">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/pro7.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Speedmaster O " data-price="60099"
-                                        data-image="Asset/img/pro7.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pr-txt">
-                            <h3> Speedmaster O </h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i>60099</p>
 
-                        </div>
-                    </div>
-                </div>
+                    <div class="col-12 col-md-6 col-lg-3 product" data-brand="Rolex" data-price="75000"
+                        data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/productwatch3.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="Rolex" data-price="75000"
+                                            data-image="Asset/img/productwatch3.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3>Rolex</h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i>75000</p>
 
-                <div class="col-12  col-md-6 col-lg-3">
-                    <div class="product-box">
-                        <div class="pr-img text-center"><img src="Asset/img/pro8.png" alt=""></div>
-                        <div class="pr-icon">
-                            <ul>
-                                <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
-                                <li>
-                                    <a href="#" class="add-cart" data-name="Gc z " data-price="40000"
-                                        data-image="Asset/img/pro8.png">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <div class="pr-txt">
-                            <h3>Gc z </h3>
-                            <p><i class="fa-solid fa-indian-rupee-sign"></i>40000</p>
-
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 product" data-brand="Chanel" data-price="69999"
+                        data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/pro5.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="Chanel" data-price="6999"
+                                            data-image="Asset/img/pro5.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3>Chanel</h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i>6999</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 product" data-brand="Timex" data-price="80000"
+                        data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/pro6.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="Timex" data-price="80000"
+                                            data-image="Asset/img/pro6.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3>Timex</h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i> 80000</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 product" data-brand="Speedmaster" data-price="60099"
+                        data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/pro7.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="Speedmaster" data-price="60099"
+                                            data-image="Asset/img/pro7.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3> Speedmaster</h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i>60099</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 product" data-brand="Gc" data-price="40000" data-gender="women">
+                        <div class="product-box">
+                            <div class="pr-img text-center"><img src="Asset/img/pro8.png" alt=""></div>
+                            <div class="pr-icon">
+                                <ul>
+                                    <li><a href="heart.html"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li>
+                                        <a href="#" class="add-cart" data-name="Gc" data-price="40000"
+                                            data-image="Asset/img/pro8.png">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="pr-txt">
+                                <h3>Gc</h3>
+                                <p><i class="fa-solid fa-indian-rupee-sign"></i>40000</p>
+
+                            </div>
+                        </div>
+                    </div>
+
 
             </div>
         </div>
-    </section> 
-
+    </section>
 
 
 
@@ -667,10 +810,11 @@
         </div>
     </footer>
 
-  
-
+    <!-- filter.js  -->
+    <script src="Asset/js/filter.js"></script>
+    <script src="Asset/js/common.js"></script>
     <!-- cart.js  -->
-<script src="cart.js"></script>
+    <script src="Asset/js/cart.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

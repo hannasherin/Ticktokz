@@ -34,6 +34,8 @@ buttons.forEach((button) => {
 
         localStorage.setItem("cart", JSON.stringify(cart));
 
+        updateCartCount();
+
         alert("Product Added Successfully");
 
     });

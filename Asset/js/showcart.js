@@ -85,6 +85,8 @@ function increaseQuantity(index) {
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
+      updateCartCount();
+
     displayCart();
 }
 
@@ -102,6 +104,8 @@ function decreaseQuantity(index) {
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
+      updateCartCount();
+
     displayCart();
 }
 
@@ -110,6 +114,9 @@ function removeItem(index) {
     cart.splice(index, 1);
 
     localStorage.setItem("cart", JSON.stringify(cart));
+
+          updateCartCount();
+
 
     displayCart();
 }

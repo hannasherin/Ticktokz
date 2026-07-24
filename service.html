@@ -33,7 +33,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle nav-sale" href="men.html" id="saleDropdown" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
-             Men
+              Men
             </a>
             <ul class="dropdown-menu" aria-labelledby="saleDropdown">
               <li><a class="dropdown-item" href="men.html">Philipp Plein</a></li>
@@ -54,13 +54,13 @@
               Women
             </a>
             <ul class="dropdown-menu" aria-labelledby="saleDropdown">
-             <li><a class="dropdown-item" href="women.html">Cartier</a></li>
-                <li><a class="dropdown-item" href="women.html">Rolex</a></li>
-                <li><a class="dropdown-item" href="women.html">Chanel</a></li>
-                <li><a class="dropdown-item" href="women.html">Titan </a></li>
-                <li><a class="dropdown-item" href="women.html">Fastrack</a></li>
-                <li><a class="dropdown-item" href="women.html">Fossil</a></li>
-               
+              <li><a class="dropdown-item" href="women.html">Cartier</a></li>
+              <li><a class="dropdown-item" href="women.html">Rolex</a></li>
+              <li><a class="dropdown-item" href="women.html">Chanel</a></li>
+              <li><a class="dropdown-item" href="women.html">Titan </a></li>
+              <li><a class="dropdown-item" href="women.html">Fastrack</a></li>
+              <li><a class="dropdown-item" href="women.html">Fossil</a></li>
+
             </ul>
           </li>
 
@@ -91,8 +91,16 @@
           <a href="login.html" class="me-3"><i class="fa-regular fa-user"></i></a>
 
           <a href="cart.html" class="position-relative">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+
+            <i class="fa-solid fa-cart-shopping fs-4"></i>
+
+            <span id="cart-count"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+
+              0
+
+            </span>
+
           </a>
         </div>
       </div>
@@ -327,6 +335,7 @@
     });
 
   </script>
+  <script src="Asset/js/common.js"></script>
 </body>
 
 </html>

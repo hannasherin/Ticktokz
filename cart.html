@@ -1,54 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
     <link rel="stylesheet" href="Asset/css/cart.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="Asset/css/style.css">
 </head>
+
 <body>
-  <div class="container py-5">
 
-    <h2 class="text-center fw-bold mb-5">
-        Your Shopping Cart
-    </h2>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold" href="index.html">TickToks</a>
 
-    <div id="cartItems"></div>
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <div class="cart-summary mt-5">
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto">
 
-        <div class="d-flex justify-content-between">
-            <h3>Subtotal</h3>
-            <h3 id="totalPrice">₹0</h3>
+                    <!-- Men -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-sale" href="men.html" id="saleDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Men
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="saleDropdown">
+                            <li><a class="dropdown-item" href="men.html">Philipp Plein</a></li>
+                            <li><a class="dropdown-item" href="men.html">Adidas</a></li>
+                            <li><a class="dropdown-item" href="men.html">Timex</a></li>
+                            <li><a class="dropdown-item" href="men.html">Guess </a></li>
+                            <li><a class="dropdown-item" href="men.html">Gc</a></li>
+                            <li><a class="dropdown-item" href="men.html">Untld</a></li>
+                            <li><a class="dropdown-item" href="men.html">Versace</a></li>
+                            <li><a class="dropdown-item" href="men.html">Nautica</a></li>
+
+                        </ul>
+                    </li>
+                    <!-- women  -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-sale" href="#" id="saleDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Women
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="saleDropdown">
+                            <li><a class="dropdown-item" href="women.html">Cartier</a></li>
+                            <li><a class="dropdown-item" href="women.html">Rolex</a></li>
+                            <li><a class="dropdown-item" href="women.html">Chanel</a></li>
+                            <li><a class="dropdown-item" href="women.html">Titan </a></li>
+                            <li><a class="dropdown-item" href="women.html">Fastrack</a></li>
+                            <li><a class="dropdown-item" href="women.html">Fossil</a></li>
+
+                        </ul>
+                    </li>
+
+                    <!-- BRANDS -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="brandsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Brands
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="brandsDropdown">
+                            <li><a class="dropdown-item" href="#">Timex</a></li>
+                            <li><a class="dropdown-item" href="#">Fastrack</a></li>
+                            <li><a class="dropdown-item" href="#">Titan</a></li>
+                            <li><a class="dropdown-item" href="#">Casio</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Other links -->
+                    <li class="nav-item"><a class="nav-link" href="contact.html"> Contact </a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html"> Service</a></li>
+
+                </ul>
+
+                <!-- Right side icons -->
+                <div class="d-flex align-items-center">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        style="border-radius: 20px;">
+                    <a href="login.html" class="me-3"><i class="fa-regular fa-user"></i></a>
+
+                    <a href="cart.html" class="position-relative">
+
+                        <i class="fa-solid fa-cart-shopping fs-4"></i>
+
+                        <span id="cart-count"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+
+                            0
+
+                        </span>
+
+                    </a>
+                </div>
+            </div>
         </div>
+    </nav>
 
-        <hr>
+    <div class="container py-5">
 
-        <div class="row mt-4">
+        <h2 class="text-center fw-bold mb-5">
+            Your Shopping Cart
+        </h2>
 
-            <div class="col-md-6">
-                <a href="index.html" class="btn btn-dark w-100">
-                    Back To Shop
-                </a>
+        <div id="cartItems"></div>
+
+        <div class="cart-summary mt-5">
+
+            <div class="d-flex justify-content-between">
+                <h3>Subtotal</h3>
+                <h3 id="totalPrice">₹0</h3>
             </div>
 
-            <div class="col-md-6">
-                <button class="btn btn-primary w-100">
-                    Checkout
-                </button>
+            <hr>
+
+            <div class="row mt-4">
+
+                <div class="col-md-6">
+                    <a href="index.html" class="btn btn-dark w-100">
+                        Back To Shop
+                    </a>
+                </div>
+
+                <div class="col-md-6">
+                    <button class="btn btn-primary w-100">
+                        Checkout
+                    </button>
+                </div>
+
             </div>
 
         </div>
 
     </div>
 
-</div>
-
-<script src="showcart.js"></script>
+    <script src="Asset/js/common.js"></script>
+    <script src="Asset/js/showcart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
 </body>
+
 </html>
