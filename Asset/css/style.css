@@ -29,6 +29,8 @@
    color: #0d6efd;
  }
 
+ 
+ 
 
 
  .image-slider .slick-slide:focus,
@@ -42,6 +44,7 @@
  .image-slider img {
    border: none !important;
    outline: none !important;
+   
  }
 
  .title {
