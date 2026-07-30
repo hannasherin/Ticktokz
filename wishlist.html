@@ -11,14 +11,14 @@
 
     <link rel="stylesheet" href="Asset/css/wishlist.css">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top " style="background-color: rgb(223, 243, 243);">
         <div class="container-fluid">
             <!-- Logo -->
             <a class="navbar-brand fw-bold" href="index.html">TickToks</a>
@@ -90,11 +90,6 @@
 
                 <!-- Right side icons -->
                 <div class="d-flex align-items-center">
-                   
-                    <a href="login.html" class="me-3"><i class="fa-regular fa-user"></i></a>
-
-                   
-
                     <a href="cart.html" class="position-relative">
 
                         <i class="fa-solid fa-cart-shopping fs-4"></i>
@@ -112,37 +107,37 @@
         </div>
     </nav>
 
-<div class="container py-5">
+    <div class="container py-5">
 
-    <h2 class="text-center fw-bold mb-5">
-        My Wishlist ❤️
-    </h2>
+        <h2 class="text-center fw-bold mb-5">
+            My Wishlist ❤️
+        </h2>
 
-    <div id="wishlistItems"></div>
+        <div id="wishlistItems"></div>
 
-    <div class="wishlist-summary mt-5">
+        <div class="wishlist-summary mt-5">
 
-        <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between">
 
-            <h4>Total Items</h4>
+                <h4>Total Items</h4>
 
-            <h4 id="wishlistTotal">0</h4>
+                <h4 id="wishlistTotal">0</h4>
+
+            </div>
+
+            <hr>
+
+            <a href="index.html" class="btn btn-dark w-100 mt-3">
+                Continue Shopping
+            </a>
 
         </div>
 
-        <hr>
-
-        <a href="index.html" class="btn btn-dark w-100 mt-3">
-            Continue Shopping
-        </a>
-
     </div>
 
-</div>
-
-<script src="Asset/js/showwishlist.js"></script>
-<script src="Asset/js/wishlist.js"></script>
-<script src="Asset/js/common.js"></script>
+    <script src="Asset/js/showwishlist.js"></script>
+    <script src="Asset/js/wishlist.js"></script>
+    <script src="Asset/js/common.js"></script>
 
 </body>
 
