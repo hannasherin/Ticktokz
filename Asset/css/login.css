@@ -1,7 +1,6 @@
 
     .log-in {
-      background: linear-gradient(to bottom, #c97b3a, #2c2c2c);
-      background-image: url(../img/blog3.png); /* optional scenic background */
+      background-image: url(../img/blog3.png); 
       background-size: cover;
       background-position: center;
       height: 100vh;

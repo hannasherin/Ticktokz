@@ -15,5 +15,5 @@ function updateCartCount() {
     }
 }
 
-// Run when page loads
+
 updateCartCount();

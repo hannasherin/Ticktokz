@@ -11,7 +11,7 @@ buttons.forEach((button) => {
         let product = {
 
             name: this.dataset.name,
-
+            
             price: this.dataset.price,
 
             image: this.dataset.image,
