@@ -1,4 +1,14 @@
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+const email = localStorage.getItem("email");
+
+// Get only this user's cart
+let cart = [];
+
+if (email) {
+    cart = JSON.parse(
+        localStorage.getItem("cart_" + email)
+    ) || [];
+}
+
 
 const cartItems = document.getElementById("cartItems");
 const totalPrice = document.getElementById("totalPrice");
@@ -79,13 +89,17 @@ function displayCart() {
     totalPrice.innerHTML = "₹" + total.toLocaleString("en-IN");
 }
 
+
 function increaseQuantity(index) {
 
     cart[index].quantity++;
 
-    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem(
+        "cart_" + email,
+        JSON.stringify(cart)
+    );
 
-      updateCartCount();
+    updateCartCount();
 
     displayCart();
 }
@@ -102,23 +116,31 @@ function decreaseQuantity(index) {
 
     }
 
-    localStorage.setItem("cart", JSON.stringify(cart));
 
-      updateCartCount();
+    localStorage.setItem(
+        "cart_" + email,
+        JSON.stringify(cart)
+    );
+
+    updateCartCount();
 
     displayCart();
 }
 
+// Remove item
 function removeItem(index) {
 
     cart.splice(index, 1);
 
-    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem(
+        "cart_" + email,
+        JSON.stringify(cart)
+    );
 
-          updateCartCount();
-
+    updateCartCount();
 
     displayCart();
 }
+
 
 displayCart();

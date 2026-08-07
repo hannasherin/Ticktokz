@@ -565,11 +565,22 @@
 
     function logout() {
 
-      localStorage.removeItem("isLoggedIn");
+    // Get logged-in user details
+    const username = localStorage.getItem("username");
+    const email = localStorage.getItem("email");
 
-      alert("Logged Out Successfully");
+    alert(
+        "Logged Out Successfully\n\n" +
+        "Username: " + username + "\n" +
+        "Email: " + email
+    );
 
-      window.location.reload();
+    // Remove login status
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("username");
+    localStorage.removeItem("email");
+
+    window.location.reload();
 
     }
 

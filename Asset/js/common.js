@@ -1,6 +1,14 @@
 function updateCartCount() {
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const email = localStorage.getItem("email");
+
+    let cart = [];
+
+    if (email) {
+        cart = JSON.parse(
+            localStorage.getItem("cart_" + email)
+        ) || [];
+    }
 
     let totalItems = 0;
 
@@ -14,6 +22,5 @@ function updateCartCount() {
         badge.innerText = totalItems;
     }
 }
-
 
 updateCartCount();

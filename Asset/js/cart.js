@@ -1,4 +1,3 @@
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 let buttons = document.querySelectorAll(".add-cart");
 
@@ -8,10 +7,24 @@ buttons.forEach((button) => {
 
         e.preventDefault();
 
+
+        const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+        if (isLoggedIn !== "true") {
+            alert("Please login first to add products to your Cart.");
+            window.location.href = "login.html";
+            return;
+        }
+
+const email = localStorage.getItem("email");
+
+
+let cart =JSON.parse(localStorage.getItem("cart_" + email)) || [];
+
         let product = {
 
             name: this.dataset.name,
-            
+
             price: this.dataset.price,
 
             image: this.dataset.image,
@@ -32,7 +45,9 @@ buttons.forEach((button) => {
 
         }
 
-        localStorage.setItem("cart", JSON.stringify(cart));
+localStorage.setItem("cart_" + email,JSON.stringify(cart));
+
+
 
         updateCartCount();
 
