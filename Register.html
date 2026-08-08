@@ -61,103 +61,98 @@
   <script>
     document.getElementById("signupForm").addEventListener("submit", function (e) {
 
-    e.preventDefault();
+      e.preventDefault();
 
-    const firstname = document.getElementById("firstname").value.trim();
-    const lastname = document.getElementById("lastname").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
+      const firstname = document.getElementById("firstname").value.trim();
+      const lastname = document.getElementById("lastname").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
 
-     // Firstname
-    if (firstname === "") {
+      // Firstname
+      if (firstname === "") {
         alert("Firstname is required");
         return;
-    }
+      }
 
 
-    // Lastname
-    if (lastname === "") {
+      // Lastname
+      if (lastname === "") {
         alert("Lastname is required");
         return;
-    }
+      }
 
 
-    // Email
-    if (email === "") {
+      // Email
+      if (email === "") {
         alert("Email is required");
         return;
-    }
+      }
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!emailPattern.test(email)) {
+      if (!emailPattern.test(email)) {
         alert("Please enter a valid email address");
         return;
-    }
+      }
 
 
-    // Password
-    if (password === "") {
+      // Password
+      if (password === "") {
         alert("Password is required");
         return;
-    }
+      }
 
-    const passwordPattern =
+      const passwordPattern =
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{6,}$/;
 
-    if (!passwordPattern.test(password)) {
+      if (!passwordPattern.test(password)) {
         alert(
-            "Password must contain:\n\n" +
-            "• At least 6 characters\n" +
-            "• At least 1 uppercase letter\n" +
-            "• At least 1 lowercase letter\n" +
-            "• At least 1 number\n" +
-            "• At least 1 special character"
+          "Password must contain At least 6 character , 1 UpperCase letter ,1 LowerCase letter,Number and Special Character"
         );
         return;
-    }
+      }
 
 
-    // Get existing users
-    let users = JSON.parse(localStorage.getItem("users")) || [];
+      // Get existing users
+      let users = JSON.parse(localStorage.getItem("users")) || [];
 
 
-    // Check whether email already exists
-    const existingUser = users.find(
+      // Check whether email already exists
+      const existingUser = users.find(
         user => user.email === email
-    );
+      );
 
-    if (existingUser) {
+      if (existingUser) {
         alert("This email is already registered!");
         return;
-    }
+      }
 
 
-    // Create user
-    const user = {
+      // Create user
+      const user = {
         firstname: firstname,
         lastname: lastname,
         email: email,
         password: password
-    };
+      };
 
 
-    // Add user
-    users.push(user);
+      // Add user
+      users.push(user);
 
 
-    // Save users
-    localStorage.setItem("users", JSON.stringify(users));
+      // Save users
+      localStorage.setItem("users", JSON.stringify(users));
 
 
-    // Success
-    alert("Registration Successful! 🎉");
+      // Success
+      alert("Registration Successful! 🎉");
 
 
-    // Go to home page
-    window.location.href = "login.html";
+      // Go to home page
+      window.location.href = "login.html";
 
-});
+    });
   </script>
 
 

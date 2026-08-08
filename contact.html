@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <header class="sticky-top" >
+  <header class="sticky-top">
     <nav class="navbar navbar-expand-lg navbar-light bg-body ">
       <div class="container-fluid">
         <!-- Logo -->
@@ -86,7 +86,7 @@
 
           <!-- Right side icons -->
           <div class="d-flex align-items-center">
-            
+
 
             <a href="wishlist.html" class="position-relative me-3">
 
@@ -118,96 +118,237 @@
       </div>
     </nav>
   </header>
-  
+
 
   <section class="sec-body ">
     <div class="container py-5  mt-4">
       <h2 class="fw-bold mb-3">Make an Enquiry</h2>
       <p class="lead">Please tell us the kind of enquiry you are making</p>
 
-      <!-- Enquiry Type -->
+   
 
-      <div class="mb-4">
-        <label class="form-label fw-semibold">Select Enquiry Type</label>
-        <div class="form-check">
-          <!-- Removed 'checked' from the input below -->
-          <input class="form-check-input" type="radio" name="enquiryType" value="Product Enquiry">
-          <label class="form-check-label">Product Enquiry</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="enquiryType" value="Services Enquiry">
-          <label class="form-check-label">Services Enquiry</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="enquiryType" value="Warranty Enquiry">
-          <label class="form-check-label">Warranty Enquiry</label>
-        </div>
-        <div class="form-check mb-3">
-          <input class="form-check-input" type="radio" name="enquiryType" value="Others">
-          <label class="form-check-label">Others</label>
-        </div>
-      </div>
-
-      <!-- Message Section -->
-      <h4 class="fw-bold mt-4">Please tell us as much as possible about the enquiry you are making</h4>
+      <!-- Enquiry Form -->
       <form id="enquiryForm">
-        <div class="mb-3">
-          <label class="form-label">Message</label>
-          <textarea class="form-control" rows="4" maxlength="500" placeholder="Your message here"></textarea>
-          <div class="form-text text-end">0 / 500</div>
+
+        <!-- Enquiry Type -->
+        <div class="mb-4">
+
+          <label class="form-label fw-semibold">
+            Select Enquiry Type
+          </label>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="enquiryType" value="Product Enquiry" required>
+
+            <label class="form-check-label">
+              Product Enquiry
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="enquiryType" value="Services Enquiry">
+
+            <label class="form-check-label">
+              Services Enquiry
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="enquiryType" value="Warranty Enquiry">
+
+            <label class="form-check-label">
+              Warranty Enquiry
+            </label>
+          </div>
+
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="radio" name="enquiryType" value="Others">
+
+            <label class="form-check-label">
+              Others
+            </label>
+          </div>
+
         </div>
+
+
+        <!-- Message Section -->
+
+        <h4 class="fw-bold mt-4">
+          Please tell us as much as possible about the enquiry you are making
+        </h4>
+
+
+        <div class="mb-3">
+
+          <label class="form-label">
+            Message
+          </label>
+
+          <textarea class="form-control" id="message" rows="4" maxlength="500" placeholder="Your message here"
+            required></textarea>
+
+          <div id="messageCount" class="form-text text-end">
+            0 / 500
+          </div>
+
+        </div>
+
 
         <!-- Personal Data -->
-        <h4 class="fw-bold mt-4">Personal Data</h4>
+
+        <h4 class="fw-bold mt-4">
+          Personal Data
+        </h4>
+
+
         <div class="row">
+
+          <!-- Title -->
+
           <div class="col-md-6 mb-3">
-            <label class="form-label">Title*</label>
-            <select class="form-select">
-              <option selected disabled>Title</option>
-              <option>Mr</option>
-              <option>Ms</option>
-              <option>Mrs</option>
-              <option>Dr</option>
+
+            <label class="form-label">
+              Title*
+            </label>
+
+            <select class="form-select" id="title" required>
+
+              <option value="" selected disabled>
+                Title
+              </option>
+
+              <option value="Mr">Mr</option>
+              <option value="Ms">Ms</option>
+              <option value="Mrs">Mrs</option>
+              <option value="Dr">Dr</option>
+
             </select>
+
           </div>
+
+
+          <!-- Language -->
+
           <div class="col-md-6 mb-3">
-            <label class="form-label">Preferred communication language*</label>
-            <select class="form-select">
-              <option selected disabled>Select language</option>
-              <option>English</option>
-              <option>Malayalam</option>
-              <option>Hindi</option>
+
+            <label class="form-label">
+              Preferred communication language*
+            </label>
+
+            <select class="form-select" id="language" required>
+
+              <option value="" selected disabled>
+                Select language
+              </option>
+
+              <option value="English">
+                English
+              </option>
+
+              <option value="Malayalam">
+                Malayalam
+              </option>
+
+              <option value="Hindi">
+                Hindi
+              </option>
+
             </select>
+
           </div>
+
+
+          <!-- First Name -->
+
           <div class="col-md-6 mb-3">
-            <label class="form-label">First Name*</label>
-            <input type="text" class="form-control" placeholder="First Name" required>
+
+            <label class="form-label">
+              First Name*
+            </label>
+
+            <input type="text" class="form-control" id="firstname" placeholder="First Name" required>
+
           </div>
+
+
+          <!-- Last Name -->
+
           <div class="col-md-6 mb-3">
-            <label class="form-label">Last Name*</label>
-            <input type="text" class="form-control" placeholder="Last Name" required>
+
+            <label class="form-label">
+              Last Name*
+            </label>
+
+            <input type="text" class="form-control" id="lastname" placeholder="Last Name" required>
+
           </div>
+
+
+          <!-- Country -->
+
           <div class="col-md-6 mb-3">
-            <label class="form-label">Country or region of residence*</label>
-            <select class="form-select">
-              <option selected disabled>Please select</option>
-              <option>India</option>
-              <option>USA</option>
-              <option>UK</option>
-              <option>Canada</option>
+
+            <label class="form-label">
+              Country or region of residence*
+            </label>
+
+            <select class="form-select" id="country" required>
+
+              <option value="" selected disabled>
+                Please select
+              </option>
+
+              <option value="India">
+                India
+              </option>
+
+              <option value="USA">
+                USA
+              </option>
+
+              <option value="UK">
+                UK
+              </option>
+
+              <option value="Canada">
+                Canada
+              </option>
+
             </select>
+
           </div>
+
+
+          <!-- Email -->
+
           <div class="col-md-6 mb-3">
-            <label class="form-label">Email Address*</label>
-            <input type="email" class="form-control" placeholder="Email" required>
+
+            <label class="form-label">
+              Email Address*
+            </label>
+
+            <input type="email" class="form-control" id="email" placeholder="Email" required>
+
           </div>
+
         </div>
 
-        <!-- Submit Button -->
+
+        <!-- Submit -->
+
         <div class="text-center mt-4">
-          <button type="submit" class="btn btn-dark px-5">Submit Enquiry</button>
+
+          <button type="submit" class="btn btn-dark px-5">
+
+            Submit Enquiry
+
+          </button>
+
         </div>
+
       </form>
+
     </div>
   </section>
 
@@ -304,41 +445,8 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Select all radio buttons
-    const radios = document.querySelectorAll('input[name="enquiryType"]');
-    const formTitle = document.getElementById('formTitle');
-    const enquiryForm = document.getElementById('enquiryForm');
 
-    // Change form title when enquiry type changes
-    radios.forEach(radio => {
-      radio.addEventListener('change', () => {
-        formTitle.textContent = `${radio.value} Form`;
-      });
-    });
-
-    // Handle form submission
-    enquiryForm.addEventListener('submit', function (event) {
-      event.preventDefault(); // prevent page reload
-
-      // Simple validation
-      const name = document.querySelector('input[placeholder="First Name"]').value.trim();
-      const email = document.querySelector('input[type="email"]').value.trim();
-      const message = document.querySelector('textarea').value.trim();
-
-      if (!name || !email || !message) {
-        alert("Please fill in all required fields before submitting.");
-        return;
-      }
-
-      // Show success message
-      alert("✅ Thank you! Your enquiry has been submitted successfully.");
-
-      // Optionally reset form
-      enquiryForm.reset();
-    });
-
-  </script>
+  <script src="Asset/js/email.js"></script>
   <script src="Asset/js/common.js"></script>
   <script src="Asset/js/wishlist.js"></script>
 
