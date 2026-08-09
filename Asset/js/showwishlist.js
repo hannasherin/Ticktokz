@@ -1,43 +1,46 @@
 
-let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+const email = localStorage.getItem("email");
+
+let wishlist = [];
+
+if (email) {
+    wishlist =
+        JSON.parse(localStorage.getItem("wishlist_" + email)) || [];
+}
 
 let container = document.getElementById("wishlistItems");
-
 let total = document.getElementById("wishlistTotal");
 
 displayWishlist();
 
-function displayWishlist(){
+function displayWishlist() {
 
-    if(wishlist.length==0){
+    if (wishlist.length === 0) {
 
-        container.innerHTML=`
+        container.innerHTML = `
 
         <div class="text-center">
 
             <h3>Your Wishlist is Empty ❤️</h3>
 
             <a href="index.html" class="btn btn-dark mt-3">
-
                 Shop Now
-
             </a>
 
         </div>
 
         `;
 
-        total.innerHTML="0";
+        total.innerHTML = "0";
 
         return;
-
     }
 
-    let html="";
+    let html = "";
 
-    wishlist.forEach((item,index)=>{
+    wishlist.forEach((item, index) => {
 
-        html+=`
+        html += `
 
         <div class="card mb-4">
 
@@ -60,12 +63,10 @@ function displayWishlist(){
                 <div class="col-md-4 text-end">
 
                     <button
+                        class="btn btn-danger"
+                        onclick="removeWishlist(${index})">
 
-                    class="btn btn-danger"
-
-                    onclick="removeWishlist(${index})">
-
-                    Remove
+                        Remove
 
                     </button>
 
@@ -76,21 +77,22 @@ function displayWishlist(){
         </div>
 
         `;
-
     });
 
-    container.innerHTML=html;
+    container.innerHTML = html;
 
-    total.innerHTML=wishlist.length;
-
+    total.innerHTML = wishlist.length;
 }
 
-function removeWishlist(index){
 
-    wishlist.splice(index,1);
+function removeWishlist(index) {
 
-    localStorage.setItem("wishlist",JSON.stringify(wishlist));
+    wishlist.splice(index, 1);
+
+    localStorage.setItem(
+        "wishlist_" + email,
+        JSON.stringify(wishlist)
+    );
 
     displayWishlist();
-
 }
